@@ -1,26 +1,35 @@
 package com.flashcard.Study.StudyMode.entity;
 
-
-import jakarta.persistence.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
-@Entity
-@Table(name = "flash_card")
-public class FlashCard {
+public class FlashCardV2 {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String word;
     private String wordTranslated;
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDateTime date;
+    private Long paperBoxId;
+
+
+    public FlashCardV2() {
+    }
+    public FlashCardV2(Long id, String word, String wordTranslated, LocalDateTime date, Long paperBoxId) {
+        this.id = id;
+        this.word = word;
+        this.wordTranslated = wordTranslated;
+        this.date = date;
+        this.paperBoxId = paperBoxId;
+    }
 
     public Long getId() {
         return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getWord() {
@@ -47,14 +56,11 @@ public class FlashCard {
         this.date = date;
     }
 
-    @Override
-    public String toString() {
-        return "FlashCard{" +
-                "id=" + id +
-                ", word='" + word + '\'' +
-                ", wordTranslated='" + wordTranslated + '\'' +
-                '}';
+    public Long getPaperBoxId() {
+        return paperBoxId;
     }
 
-
+    public void setPaperBoxId(Long paperBoxId) {
+        this.paperBoxId = paperBoxId;
+    }
 }
