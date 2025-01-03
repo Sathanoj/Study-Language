@@ -2,7 +2,6 @@ package com.flashcard.Study.StudyMode.controller;
 
 import com.flashcard.Study.StudyMode.entity.FlashCardV2;
 import com.flashcard.Study.StudyMode.entity.PaperBoxV2;
-import com.flashcard.Study.StudyMode.entity.impl.FlashCardRepositoryImpl;
 import com.flashcard.Study.StudyMode.model.service.PaperBoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -57,7 +56,7 @@ public class PaperBoxController {
         paperBoxService.deletePaperBox(boxName);
     }
 
-    @DeleteMapping("/{boxName}/delete_box_by_id")
+    @DeleteMapping("/{idBox}/delete_box_by_id")
     public void deletePaperBoxById(@PathVariable Long idBox) {
         paperBoxService.deletePaperBoxById(idBox);
     }

@@ -79,7 +79,7 @@ public class PaperBoxRepositoryImpl implements PaperBoxService {
             getFC.setPaperBoxId(paperBOX.getId());
             paperBOX.getFlashCardV2List().add(getFC);
             flashCardRepository.save(getFC);
-            save(paperBOX);
+//            save(paperBOX);
         }
         return getFC;
     }
@@ -99,7 +99,7 @@ public class PaperBoxRepositoryImpl implements PaperBoxService {
 
     @Override
     public void deletePaperBoxById(Long boxId) {
-        String sql = "DEET FROM paper_box WHERE id = ?";
+        String sql = "DELETE FROM paper_box WHERE id = ?";
         template.update(sql, boxId);
     }
 
