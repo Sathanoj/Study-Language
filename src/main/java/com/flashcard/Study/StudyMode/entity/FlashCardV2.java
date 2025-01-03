@@ -13,9 +13,7 @@ public class FlashCardV2 {
     private LocalDateTime date;
     private Long paperBoxId;
 
-
     public FlashCardV2() {}
-
 
     public FlashCardV2(Long id, String word, String wordTranslated, LocalDateTime date, Long paperBoxId) {
         this.id = id;

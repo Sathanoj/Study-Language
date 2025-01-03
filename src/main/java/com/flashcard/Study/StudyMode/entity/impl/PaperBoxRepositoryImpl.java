@@ -23,11 +23,12 @@ public class PaperBoxRepositoryImpl implements PaperBoxService {
         this.template = template;
     }
 
-    private final RowMapper<PaperBoxV2> paperBoxV2Mapper = (rs, rowNum) -> new PaperBoxV2(
-            rs.getLong("id"),
-            rs.getString("name"),
-            (rs.getTimestamp("date") != null) ? rs.getTimestamp("date").toLocalDateTime() : null,
-            null // FlashCards serão carregados separadamente
+    private final RowMapper<PaperBoxV2> paperBoxV2Mapper = (rs, rowNum) ->
+            new PaperBoxV2(
+                rs.getLong("id"),
+                rs.getString("name"),
+                (rs.getTimestamp("date") != null) ? rs.getTimestamp("date").toLocalDateTime() : null,
+                null // FlashCards serão carregados separadamente
     );
 
 
@@ -87,31 +88,4 @@ public class PaperBoxRepositoryImpl implements PaperBoxService {
         String sql = "SELECT * FROM flash_card WHERE paper_box_id = ?";
         return template.query(sql, flashCardMapper, paperBoxId);
     }
-
-
-    public void updateBox() {
-
-    }
-
-//    @Override
-//    public int save(PaperBoxV2 paperBoxV2) {
-//        String sql = "INSERT INTO paper_box (id, name, date) VALUES (?, ?, ?)";
-//        return template.update(sql,
-//                paperBoxV2.getId(), paperBoxV2.getName(), paperBoxV2.getDate());
-//    }
-
-//    @Override
-//    public List<FlashCardV2> findFlashCardsByPaperBoxId(Long paperBoxId) {
-//        String sql = "SELECT * FROM flash_card WHERE paper_box_id = ?";
-//        List<FlashCardV2> flashCardV2List = template.query(sql, new Object[]{paperBoxId}, flashCardMapper);
-//        return flashCardV2List;
-//    }
-
-//    @Override
-//    public List<FlashCardV2> findFlashCardsByPaperBoxId(Long paperBoxId) {
-//        String sql = "INSERT INTO paper_box (name, date VALUES (?, ?)";
-//        return template.query(sql,
-//                flashCardMapper,
-//                paperBoxId);
-//    }
 }
