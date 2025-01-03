@@ -13,4 +13,8 @@ public interface PaperBoxService {
     int save(PaperBoxV2 paperBoxV2);
     FlashCardV2 saveFlashCardInBox(String boxName, FlashCardV2 flashCardV2);
     List<FlashCardV2> findFlashCardsByPaperBoxId(Long paperBoxId);
+
+    void deletePaperBox(String delBoxName);
+    void deletePaperBoxById(Long boxId);
+    void deleteFlashCard(Long idFC);
 }

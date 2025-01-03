@@ -19,9 +19,6 @@ public class PaperBoxController {
     private Long idIncrement;
 
     @Autowired
-    private FlashCardRepositoryImpl flashCardRepository;
-
-    @Autowired
     private PaperBoxService paperBoxService;
 
 
@@ -54,4 +51,55 @@ public class PaperBoxController {
         List<FlashCardV2> flashCardV2List = paperBoxService.findFlashCardsByPaperBoxId(idBox);
         return flashCardV2List;
     }
+
+    @DeleteMapping("/{boxName}/delete_box")
+    public void deletePaperBox(@PathVariable String boxName) {
+        paperBoxService.deletePaperBox(boxName);
+    }
+
+    @DeleteMapping("/{boxName}/delete_box_by_id")
+    public void deletePaperBoxById(@PathVariable Long idBox) {
+        paperBoxService.deletePaperBoxById(idBox);
+    }
+
+    @DeleteMapping("/{delFC}/delete_FC")
+    public void deleteFlashCard(@PathVariable Long id) {
+        paperBoxService.deleteFlashCard(id);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

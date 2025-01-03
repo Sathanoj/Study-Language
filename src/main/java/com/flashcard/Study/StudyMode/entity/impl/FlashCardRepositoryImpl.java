@@ -2,7 +2,6 @@ package com.flashcard.Study.StudyMode.entity.impl;
 
 import com.flashcard.Study.StudyMode.entity.FlashCardV2;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;

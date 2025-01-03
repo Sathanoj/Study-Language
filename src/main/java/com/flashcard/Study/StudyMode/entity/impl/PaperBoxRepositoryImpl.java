@@ -8,6 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -88,4 +89,52 @@ public class PaperBoxRepositoryImpl implements PaperBoxService {
         String sql = "SELECT * FROM flash_card WHERE paper_box_id = ?";
         return template.query(sql, flashCardMapper, paperBoxId);
     }
+
+    @Override
+    public void deletePaperBox(String delBoxName) {
+//        All FlashCards there are related to the box will be deleted
+        String sql = "DELETE FROM paper_box WHERE name = ?";
+        template.update(sql, delBoxName);
+    }
+
+    @Override
+    public void deletePaperBoxById(Long boxId) {
+        String sql = "DEET FROM paper_box WHERE id = ?";
+        template.update(sql, boxId);
+    }
+
+    @Override
+    public void deleteFlashCard(Long idFC) {
+        String sql = "DELETE FROM flash_card WHERE id = ?";
+        template.update(sql, idFC);
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
