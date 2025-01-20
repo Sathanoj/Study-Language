@@ -50,4 +50,14 @@ public class PaperBoxV2 {
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
+
+    @Override
+    public String toString() {
+        return "PaperBoxV2{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", date=" + date +
+                ", flashCardV2List=" + flashCardV2List +
+                '}';
+    }
 }
