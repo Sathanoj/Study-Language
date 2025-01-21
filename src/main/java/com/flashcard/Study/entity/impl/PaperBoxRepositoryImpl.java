@@ -1,8 +1,8 @@
-package com.flashcard.Study.StudyMode.entity.impl;
+package com.flashcard.Study.entity.impl;
 
-import com.flashcard.Study.StudyMode.entity.FlashCardV2;
-import com.flashcard.Study.StudyMode.entity.PaperBoxV2;
-import com.flashcard.Study.StudyMode.model.service.PaperBoxService;
+import com.flashcard.Study.entity.FlashCardV2;
+import com.flashcard.Study.entity.PaperBoxV2;
+import com.flashcard.Study.model.service.PaperBoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;

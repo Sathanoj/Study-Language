@@ -1,4 +1,4 @@
-package com.flashcard.Study.StudyMode.entity;
+package com.flashcard.Study.entity;
 
 import org.springframework.format.annotation.DateTimeFormat;
 

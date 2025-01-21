@@ -1,4 +1,4 @@
-package com.flashcard.Study.StudyMode.controller.firstGame;
+package com.flashcard.Study.controller.firstGame;
 
 
 import org.springframework.web.bind.annotation.RestController;

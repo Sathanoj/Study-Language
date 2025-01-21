@@ -1,4 +1,4 @@
-package com.flashcard.Study.StudyMode.entity;
+package com.flashcard.Study.entity;
 
 import java.time.LocalDateTime;
 import java.util.List;

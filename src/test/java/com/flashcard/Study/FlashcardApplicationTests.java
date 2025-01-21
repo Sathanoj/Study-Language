@@ -1,7 +1,8 @@
 package com.flashcard.Study;
 
-import com.flashcard.Study.StudyMode.entity.PaperBoxV2;
-import com.flashcard.Study.StudyMode.model.service.PaperBoxService;
+import com.flashcard.Study.controller.PaperBoxController;
+import com.flashcard.Study.entity.PaperBoxV2;
+import com.flashcard.Study.model.service.PaperBoxService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -15,9 +16,16 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 class FlashcardApplicationTests {
 
 	@Autowired
+	PaperBoxController paperBoxController;
+	@Autowired
 	PaperBoxService paperBoxService;
 	List<PaperBoxV2> paperBoxV2s;
 
+	@Test
+	void findBoxRoute() {
+		var flashCardV2List = paperBoxController.paperBoxByName("Trabalho");
+		System.out.println(flashCardV2List);
+	}
 	@Test
 	void getAllBoxTest() {
 		paperBoxV2s = paperBoxService.findAll();
@@ -25,6 +33,9 @@ class FlashcardApplicationTests {
 		assertFalse(paperBoxV2s.isEmpty(), "A lista de PaperBox está vazia");
 		for (PaperBoxV2 boxV2 : paperBoxV2s) {
 			System.out.println(boxV2);
+			if (!boxV2.getFlashCardV2List().isEmpty()) {
+				System.out.println(boxV2.getFlashCardV2List().toString());
+			}
 		}
 	}
 

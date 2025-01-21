@@ -1,7 +1,7 @@
-package com.flashcard.Study.StudyMode.model.service;
+package com.flashcard.Study.model.service;
 
-import com.flashcard.Study.StudyMode.entity.FlashCardV2;
-import com.flashcard.Study.StudyMode.entity.PaperBoxV2;
+import com.flashcard.Study.entity.FlashCardV2;
+import com.flashcard.Study.entity.PaperBoxV2;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

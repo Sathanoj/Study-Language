@@ -1,6 +1,6 @@
 package com.flashcard.Study.StudyMode;
 
-import com.flashcard.Study.StudyMode.entity.PaperBoxV2;
+import com.flashcard.Study.entity.PaperBoxV2;
 
 import java.util.List;
 

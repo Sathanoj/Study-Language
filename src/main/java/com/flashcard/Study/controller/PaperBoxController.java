@@ -1,8 +1,8 @@
-package com.flashcard.Study.StudyMode.controller;
+package com.flashcard.Study.controller;
 
-import com.flashcard.Study.StudyMode.entity.FlashCardV2;
-import com.flashcard.Study.StudyMode.entity.PaperBoxV2;
-import com.flashcard.Study.StudyMode.model.service.PaperBoxService;
+import com.flashcard.Study.entity.FlashCardV2;
+import com.flashcard.Study.entity.PaperBoxV2;
+import com.flashcard.Study.model.service.PaperBoxService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

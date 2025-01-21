@@ -1,11 +1,10 @@
-package com.flashcard.Study.StudyMode.entity.impl;
+package com.flashcard.Study.entity.impl;
 
-import com.flashcard.Study.StudyMode.entity.FlashCardV2;
+import com.flashcard.Study.entity.FlashCardV2;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Repository
 public class FlashCardRepositoryImpl {

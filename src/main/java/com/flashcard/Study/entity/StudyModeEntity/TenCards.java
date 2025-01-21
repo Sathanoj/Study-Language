@@ -1,4 +1,4 @@
-package com.flashcard.Study.StudyMode.entity.StudyModeEntity;
+package com.flashcard.Study.entity.StudyModeEntity;
 
 public class TenCards {
     private int nextCard;
