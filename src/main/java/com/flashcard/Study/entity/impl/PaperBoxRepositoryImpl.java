@@ -78,7 +78,6 @@ public class PaperBoxRepositoryImpl implements PaperBoxService {
             getFC.setPaperBoxId(paperBOX.getId());
             paperBOX.getFlashCardV2List().add(getFC);
             flashCardRepository.save(getFC);
-//            save(paperBOX);
         }
         return getFC;
     }

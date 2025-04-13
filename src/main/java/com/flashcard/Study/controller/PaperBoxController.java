@@ -20,7 +20,6 @@ public class PaperBoxController {
     @Autowired
     private PaperBoxService paperBoxService;
 
-
     @GetMapping("/all")
     public List<PaperBoxV2 > getAll() {
         return paperBoxService.findAll();
