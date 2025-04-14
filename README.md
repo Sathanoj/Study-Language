@@ -12,10 +12,21 @@ First start docker compose whith:
 Before start project run these SQL commands to create the necessary tables:
 
 ```
-CREATE TABLE paper_box (
+CREATE TABLE usuario (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     date TIMESTAMP
+);
+
+CREATE TABLE paper_box (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    date TIMESTAMP,
+    usuario_id INT NOT NULL,
+    CONSTRAINT fk_usuario
+        FOREIGN KEY (usuario_id)
+        REFERENCES usuario(id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE flash_card (
